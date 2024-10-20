@@ -1,0 +1,56 @@
+/* Service Section Styling */
+.services-section {
+    color: #1a202c; /* Light mode text */
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .dark .services-section {
+  color: #f9fafb; /* Dark mode text */
+  }
+  
+  /* Service Card */
+  .service-card {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  }
+  
+  .dark .service-card {
+    background-color: #2d3748;
+    box-shadow: 0 10px 20px rgba(255, 255, 255, 0.1);
+  }
+  
+  .service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Icon Styling */
+  .icon-container {
+    margin-bottom: 1.5rem;
+  }
+  
+  .icon-container i {
+    transition: color 0.3s ease-in-out;
+  }
+  
+  /* Light/Dark Mode */
+  .dark i {
+    color: #edf2f7; /* Lighter color for dark mode */
+  }
+  
+  /* Text Responsiveness */
+  @media (max-width: 768px) {
+    .text-5xl {
+      font-size: 2.5rem; /* Adjust for smaller screens */
+    }
+  }
+  
+  @media (max-width: 640px) {
+    .text-5xl {
+      font-size: 2rem; /* Further adjust for mobile */
+    }
+  }
+  

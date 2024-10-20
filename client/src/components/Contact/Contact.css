@@ -1,0 +1,75 @@
+/* Contact Section Styling */
+.contact-section-home {
+    perspective: 1000px; /* Enables 3D effects */
+  }
+  
+  .input-field {
+    width: 100%;
+    padding: 15px;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: black;
+    border: none;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Dark Mode for input fields */
+  .dark .input-field {
+    background-color: rgba(0, 0, 0, 0.2);
+    color: white;
+  }
+  
+  .input-field:focus {
+    outline: none;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+        transform: translateY(-2px);
+  }
+  
+  .submit-btn {
+    background-color: #f97316; /* Tailwind orange */
+    padding: 15px;
+    border-radius: 12px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .submit-btn:hover {
+    background-color: #ea580c;
+  }
+  
+  /* Animations */
+  @keyframes fade-in-down {
+    0% {
+      opacity: 0;
+      transform: translateY(-50px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes fade-in-up {
+    0% {
+      opacity: 0;
+      transform: translateY(50px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .animate-fade-in-down {
+    animation: fade-in-down 1s ease forwards;
+  }
+  
+  .animate-fade-in-up {
+    animation: fade-in-up 1s ease forwards;
+  }
+  

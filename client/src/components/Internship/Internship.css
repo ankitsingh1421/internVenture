@@ -1,0 +1,55 @@
+.intern-card-container {
+  display: grid;
+  gap: 50px;
+  grid-template-columns: repeat(1, 1fr); /* Default: 1 column */
+  margin: 30px;
+}
+
+@media (min-width: 768px) {
+  .intern-card-container {
+      grid-template-columns: repeat(2, 1fr); /* Tablets: 2 columns */
+  }
+}
+
+@media (min-width: 1024px) {
+  .intern-card-container {
+      grid-template-columns: repeat(3, 1fr); /* Laptops: 3 columns */
+  }
+}
+
+.intern-card {
+  width: 100%;
+  height: auto;
+  padding: 20px;
+}
+
+.intern-card img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.internship-available {
+  cursor: pointer;
+  background-color: #363b4e;
+  transition: background-color 0.3s ease;
+}
+
+.internship-available:hover {
+  background-color: #2f3c4f;
+}
+
+@media (max-width: 550px) {
+  .intern-training-info {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      padding: 33px;
+  }
+
+  .intern-card-container {
+      grid-template-columns: repeat(1, 1fr); /* Ensure single column on small screens */
+      gap: 20px; /* Smaller gap on mobile */
+  }
+}

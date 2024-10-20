@@ -1,0 +1,214 @@
+/* Base Container Styling */
+.container-homeTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* padding: 2rem; */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: relative;
+  height: 400px;
+  margin-top: 220px;
+  margin-bottom: 20px;
+}
+
+/* Left Side Styling */
+.left-side-homeTop {
+  flex: 1;
+  padding: 2rem;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+}
+
+.typing-effect-homeTop p {
+  font-size: 1.2rem;
+  color: #555;
+  line-height: 1.5;
+  max-width: 600px;
+  white-space: pre-wrap;
+  text-align: center; /* Center text for better alignment */
+}
+
+.typing-effect-homeTop{
+  height: 145px;
+  width: 100%;
+}
+/* Right Side Styling */
+.right-side-homeTop {
+  flex: 1;
+  position: relative;
+  text-align: center;
+  /* padding: 1rem; */
+  width: 100%;
+  height: 100vh;  
+}
+
+/* Triangle Divider Styling */
+.triangle-divider {
+  position: relative;
+  padding: 1rem;
+  color: #1d72b8;
+  overflow: hidden;
+  display: inline-block;
+}
+
+.company-name {
+  font-size: 4rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+/* Image Styling (if used) */
+.image-homeTop {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Keyframes for Animation */
+@keyframes scaleText {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+}
+
+
+
+/* Responsive Styles */
+
+/* Tablet Styles */
+@media (max-width: 1024px) {
+  .container-homeTop {
+                
+  }
+
+  .left-side-homeTop,
+  .right-side-homeTop {
+    width: 100%;
+    padding: 1rem;
+    text-align: center; /* Center text for both sections */
+  }
+
+  .heading-homeTop h1 {
+    font-size: 2rem; /* Slightly smaller font size for tablets */
+  }
+
+  .typing-effect-homeTop p {
+    font-size: 1rem; /* Adjust font size for better readability */
+    max-width: 100%; /* Allow text to use full width */
+  }
+
+  .company-name {
+    font-size: 3rem; /* Adjust font size for tablets */
+  }
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .container-homeTop {
+    flex-direction: column;
+    padding: 1rem;
+    height: auto; /* Allow height to adjust based on content */
+  }
+
+  .left-side-homeTop,
+  .right-side-homeTop {
+    width: 100%;
+    padding: 0.5rem;
+    text-align: center; /* Center text for both sections */
+  }
+
+  .heading-homeTop h1 {
+    font-size: 1.5rem; /* Smaller font size for mobile */
+  }
+
+  .typing-effect-homeTop p {
+    font-size: 0.875rem; /* Adjust font size for better readability on mobile */
+    max-width: 100%; /* Allow text to use full width */
+  }
+
+  .company-name {
+    font-size: 2rem; /* Adjust font size for mobile */
+  }
+
+  .home-top-left-bottom {
+    margin-top: 1rem; /* Adjust margin for mobile */
+  }
+}
+
+
+
+  .clip-left-diagonal {
+  clip-path: polygon(10% 0px, 100% 0%, 100% 100%, 0px 100%)
+  }
+
+
+  .heading-homeTop {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px; /* Add some margin below */
+  }
+  
+  .fixed-box {
+    width: 350px; /* Fixed width */
+    height: 150px; /* Fixed height */
+    border-radius: 10px; /* Optional: for a rounded box */
+    overflow: hidden; /* Hide any overflow from scaling */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .fixed-box p {
+    font-size: 2.2rem; /* Fixed size text */
+    margin: 0;
+  }
+  
+  .scale-animation {
+    animation: scaleText 2s infinite ease-in-out;
+    display: inline-block;
+  }
+  
+  /* Keyframes for Animation */
+  @keyframes scaleText {
+    0%, 100% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.2);
+    }
+  }
+  
+
+  .right-side-homeTop2{
+    display: none;
+  }
+
+  @media (max-width:768px) {
+    .right-side-homeTop{
+      display: none;
+    }
+    .right-side-homeTop2{
+      display: block;
+      width: 100%;
+      height: 100%;
+      margin-top: 15px;
+      margin-left: 10px;
+    }
+
+    
+    .right-side-homeTop2 img{
+      width: 100%;
+      height: 100%;
+    }
+
+  }

@@ -1,0 +1,119 @@
+Base styles for the navigation bar
+/* General Navbar Styles */
+
+
+.nav-link {
+  padding: 0.75rem;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: gray;
+}
+
+.custom-triangle{
+  display: none;
+} 
+.group:hover .custom-triangle{
+display :block
+}
+
+/* Dropdown Content Styling */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 160px;
+  z-index: 1000;
+  background-color: #333;
+  padding: 0.5rem;
+  border-radius: 0.375rem;
+  transition: all 0.3s ease-in-out;
+}
+
+.dropdown-content a {
+  display: block;
+  padding: 0.5rem;
+  text-decoration: none;
+  color: white;
+}
+
+.dropdown-content a:hover {
+  background-color: #444;
+}
+
+/* Group Hover to Show Dropdown */
+.group:hover .dropdown-content {
+  display: flex;
+}
+
+nav {
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+  /* box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px; */
+}
+
+/* Responsive Navbar styles */
+nav .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav a {
+  margin-right: 16px;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #718096;
+}
+
+/* Menu visibility for mobile */
+nav button {
+  display: block;
+}
+
+nav .nav-services {
+  display: block;
+  padding: 8px 0;
+  transition: color 0.3s ease;
+}
+
+/* For Mobile Menu */
+nav .bg-opacity-70 {
+   /* Adjust the transparency */
+  backdrop-filter: blur(10px); /* Mirror/blur effect */
+}
+
+/* Media Query for mobile responsiveness */
+@media (max-width: 768px) {
+  .nav-services {
+    display: block;
+    text-align: center;
+    width: 100%;
+  }
+
+  .flex-col {
+    flex-direction: column;
+  }
+
+  .space-x-8 {
+    margin-top: 10px;
+  }
+
+  .nav-true {
+    backdrop-filter: blur(10px);
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+
+  .services a{
+    color: white;
+    font-size: 15px;
+    font-weight: 600;
+  }
+}
+
