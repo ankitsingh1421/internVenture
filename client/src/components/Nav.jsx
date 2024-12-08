@@ -52,16 +52,16 @@ const Nav = () => {
             } md:flex md:flex-row transition-all duration-300 bg-opacity-70 backdrop-blur-md`}
         >
           <a href="/verify" className="hover:text-gray-500 text-center py-2 nav-services cursor-pointer">
-            Verify
+            HOME
           </a>
           <Link to="internship" smooth={true} duration={100} className="hover:text-gray-500 text-center py-2 nav-services cursor-pointer">
-            Internship
+            Courses
           </Link>
 
           {/* Dropdown for Services */}
           <div className="relative group cursor-pointer">
             <Link to="services"smooth={true} duration={100} className="hover:text-gray-500 text-center py-2 nav-link" >
-              Services
+              webinars
             </Link>
             {/* <div class=" absolute w-0 h-0 border-l-8 border-r-8 border-b-8 border-transparent border-b-[#333] ml-8 custom-triangle"></div>
             <div className="absolute hidden group-hover:flex flex-col bg-[#333] text-white p-4 rounded-lg mt-2 dropdown-content">
@@ -75,7 +75,7 @@ const Nav = () => {
             About
           </Link>
           <Link to="contact" smooth={true} duration={100} className="hover:text-gray-500 text-center py-2 nav-services cursor-pointer">
-            Contact
+            Blog
           </Link>
         </div>
 
@@ -87,7 +87,8 @@ const Nav = () => {
             onClick={handleMenuToggle}
             aria-label="Toggle menu"
           >
-            {menuOpen ? <FaTimes /> : <FaBars />}
+            Login
+            {/* {menuOpen ? <FaTimes /> : <FaBars />} */}
           </button>
 
           {/* Theme toggle icon */}
@@ -97,7 +98,8 @@ const Nav = () => {
             onClick={handleToggle}
             aria-label="Toggle theme"
           >
-            {theme === 'light' ? <FaMoon /> : <FaSun />}
+            Login
+            {/* {theme === 'light' ? <FaMoon /> : <FaSun />} */}
           </button>
         </div>
       </div>

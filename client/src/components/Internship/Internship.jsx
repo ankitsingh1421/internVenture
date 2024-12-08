@@ -15,7 +15,7 @@ const Internship = () => {
  useEffect(() => {
 
  const typed = new Typed(element.current, {
-  strings: ["Freshers", "Persuing/Collage Students"],
+  strings: ["Freshers", "Persuing student /professionals "],
   typeSpeed: 50,
   backSpeed: 20,
   loop: true,
@@ -41,18 +41,19 @@ useEffect(()=>{
           <div className='intern-container mt-20'>
       <header className='h-28  content-center text-center ml-6 mr-6 rounded-lg' data-aos='fade-up'>
         <p className=' text-5xl font-bold'>
-          Internships for <span className='element' ref={element}></span>
+          Courses for <span className='element' ref={element}></span>
         </p>
       </header>
       <div className="intern-training-info flex justify-around pt-8 pb-8 ml-6 mr-6 rounded-lg mt-1">
   <div className='p-4 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg internship-available shadow-lg hover:shadow-xl transition-shadow duration-300'>
     <p className='text-white text-center text-lg font-semibold tracking-wide'>
-      Work from Home Internships
+      {/* Work from Home Internships */}
+      Online Courses 
     </p>
   </div>
   <div className='p-4 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg internship-available shadow-lg hover:shadow-xl transition-shadow duration-300'>
     <p className='text-white text-center text-lg font-semibold tracking-wide'>
-      Internship With Training
+    offline Courses
     </p>
   </div>
 </div>

@@ -7,19 +7,35 @@ import Pawan from '../../TeamMemberImage/Pawan.jpeg'
 
 const About = () => {
  
+  const [activeSection, setActiveSection] = useState(0); // Default section is 'Learn'
+
+  const handleArrowClick = () => {
+    setActiveSection((prev) => (prev + 1) % 3); // Cycle through 0, 1, 2
+  };
+
+  const sections = [
+    {
+      title: "LEARN",
+      text: "from the most renowned music gurus and Artium certified teachers",
+    },
+    {
+      title: "PRACTICE",
+      text: "music anytime with personal teachers and online studio tools to perfect your skill",
+    },
+    {
+      title: "PERFORM",
+      text: "like a pro in front of a huge audience. Artium showcase is waiting for you!",
+    },
+  ];
 
   const imageSets = [
     [
-      { src: '', alt: 'Ankit' , role:"FOUNDER",url:"https://www.linkedin.com/in/ankitsingh1421/"},
-      { src: Pawan, alt: 'Pawan',role:"CEO" },
-      { src: '', alt: 'Vishesh ' ,role:"DIRECTOR"},
-      { src: '/', alt: 'Sakshi ',role:"MANAGER" },
+      { src: '/founder.png', alt: 'Sanskar saswat ' , role:"FOUNDER",url:"https://www.linkedin.com/in/sanskar-saswat-47a61725a/"},
+      { src: '', alt: 'ceo_name',role:"CEO" },
+      { src: '', alt: 'name.. ' ,role:"DIRECTOR"},
+      { src: '/', alt: 'name... ',role:"MANAGER" },
 
-    ],
-    [
-      { src: 'https://d20rzw95v74l8a.cloudfront.net/aboutus/t6.webp', alt: 'pawan ' ,role:"manager"},
-      { src: 'https://d20rzw95v74l8a.cloudfront.net/aboutus/t6.webp', alt: 'sakshi ' ,role:"hr"},
-    ],
+    ]
   ];
   
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -54,7 +70,6 @@ const About = () => {
   useEffect(() => {
     AOS.init({ easing: 'ease-in-sine', duration: 800, delay: 0 });
   }, []);
-
   return (
     <div id='about'>
       <Nav />
@@ -62,10 +77,11 @@ const About = () => {
       <div className="flex flex-col items-center justify-center text-center pt-36 hero-features-gap">
         <div className="w-[51rem] max-sm:w-[19rem] max-md:w-[35rem] max-lg:w-[42rem]">
           <h3 data-aos="fade-up" className="gradient-text font-heading leading-[3.8rem] text-[44px] max-sm:text-3xl font-semibold">
-            On A Mission To Help Billions Through Providing Internships
+          On a Mission to Inspire Millions by Teaching the Art of Music
+
           </h3>
           <h5 data-aos="fade-up" className="text-[22px] leading-8 max-sm:text-sm mt-3 ">
-          We are a dynamic company offering valuable internships and creating innovative software solutions.
+          We are a passionate community dedicated to nurturing musical talent and crafting innovative learning experiences
           </h5>
         </div>
       </div>
@@ -87,36 +103,100 @@ const About = () => {
       </div>
 
       {/* Certification Section */}
-      <div class="container">
-    <div class="heading-section">
-        <h2>We Are Registered And Certified</h2>
-        <p>Incorporated with the Ministry of Corporate Affairs, we operate with full compliance and transparency.</p>
+      <div className="layout-container">
+      <h3 className="title lightText">Music: Learn, Practice, Perform</h3>
+      <div
+        className="sub-title lightText"
+        style={{ fontSize: "16px", lineHeight: "21px" }}
+      >
+        It is ongoing. It is wholesome. One is incomplete without the other.
+      </div>
+      <div className="MuiGrid-root MuiGrid-container spinner-padding css-1d3bbye">
+        <div className="no-img">
+          <div className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-1 MuiGrid-grid-sm-4 MuiGrid-grid-md-4 p-20 css-1057s6h">
+            <img
+              alt=""
+              src="https://artiumacademy.mo.cloudinary.net/v1n/webNewImages/circularImages/home-learningmusic-circular-learn.svg"
+              className="rotate-img rotation"
+              style={{ width: "80%" }}
+            />
+            <img
+              alt=""
+              src="https://artiumacademy.mo.cloudinary.net/v1n/webNewImages/circularImages/home-learningmusic-arrow-image.svg"
+              style={{ cursor: "pointer" }}
+            />
+          </div>
+          <div className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-1 MuiGrid-grid-sm-4 MuiGrid-grid-md-8 css-15j5kwk">
+            <div className="img-spinner-content">
+              <span className="custom-chip-title">LEARN&nbsp;</span>
+              <span
+                className="custom-chip-title"
+                style={{ color: "rgb(255, 251, 255)" }}
+              >
+                &nbsp;from the most renowned music gurus and Artium certified
+                teachers
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <div className="display-img">
+          <div className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-1 MuiGrid-grid-sm-4 MuiGrid-grid-md-4 p-20 css-1057s6h">
+            <img
+              alt=""
+              src="https://artiumacademy.mo.cloudinary.net/v1n/webNewImages/circularImages/home-learningmusic-circular-practice.svg"
+              className="rotate-img rotation"
+              style={{ width: "80%" }}
+            />
+            <img
+              alt=""
+              src="https://artiumacademy.mo.cloudinary.net/v1n/webNewImages/circularImages/home-learningmusic-arrow-image.svg"
+              style={{ cursor: "pointer" }}
+            />
+          </div>
+          <div className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-1 MuiGrid-grid-sm-4 MuiGrid-grid-md-8 css-15j5kwk">
+            <div className="img-spinner-content">
+              <span className="custom-chip-title">PRACTICE&nbsp;</span>
+              <span
+                className="custom-chip-title"
+                style={{ color: "rgb(255, 251, 255)" }}
+              >
+                &nbsp;music anytime with personal teachers and online studio
+                tools to perfect your skill
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <div className="no-img">
+          <div className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-1 MuiGrid-grid-sm-4 MuiGrid-grid-md-4 p-20 css-1057s6h">
+            <img
+              alt=""
+              src="https://artiumacademy.mo.cloudinary.net/v1n/webNewImages/circularImages/home-learningmusic-circular-perform.svg"
+              className="rotate-img rotation"
+              style={{ width: "80%" }}
+            />
+            <img
+              alt=""
+              src="https://artiumacademy.mo.cloudinary.net/v1n/webNewImages/circularImages/home-learningmusic-arrow-image.svg"
+              style={{ cursor: "pointer" }}
+            />
+          </div>
+          <div className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-1 MuiGrid-grid-sm-4 MuiGrid-grid-md-8 css-15j5kwk">
+            <div className="img-spinner-content">
+              <span className="custom-chip-title">PERFORM&nbsp;</span>
+              <span
+                className="custom-chip-title"
+                style={{ color: "rgb(255, 251, 255)" }}
+              >
+                &nbsp;like a pro in front of a huge audience. Artium showcase is
+                waiting for you!
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-    
-    <div class="cards-wrapper">
-
-        <div className="card">
-            <img src="https://octanet.in/storage/2024/06/startup-india-logo1-02-1024x265.png" alt="Startup India Logo"/>
-        </div>
-        <div className="card">
-            <img src="https://octanet.in/storage/2024/06/iso-9001-logo.png" alt="ISO 9001 Logo"/>
-        </div>
-        <div className="card">
-            <img src="https://octanet.in/storage/2024/06/aicte.png" alt="AICTE Logo"/>
-        </div>
-        <div className="card">
-            <img src="https://octanet.in/storage/2024/06/IAF-logo-300x193-compressed.webp" alt="IAF Logo"/>
-        </div>
-
-
-        <div className="card">
-            <img src="https://octanet.in/storage/2024/06/startup-india-logo1-02-1024x265.png" alt="Startup India Logo"/>
-        </div>
-        <div className="card">
-            <img src="https://octanet.in/storage/2024/06/iso-9001-logo.png" alt="ISO 9001 Logo"/>
-        </div>
-    </div>
-</div>
 
       {/* Vision Section */}
       <div className="flex flex-col items-center mt-32 max-sm:p-5 max-sm:mt-10">
